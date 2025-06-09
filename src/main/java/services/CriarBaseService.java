@@ -9,7 +9,7 @@ public class CriarBaseService {
     CriarBaseDAO criarBaseDAO = new CriarBaseDAO();
 
     public void criarBase(String servidor, String usuario, String senha, String porta, String nomeBase) throws SQLException {
-        criarBaseDAO.criarArquivoProperties(servidor, usuario, porta, nomeBase);
+        criarBaseDAO.criarArquivoProperties(servidor, usuario, porta, nomeBase, senha);
         criarBaseDAO.criarBancoDeDados(servidor, usuario, senha, porta, nomeBase);
     }
 }

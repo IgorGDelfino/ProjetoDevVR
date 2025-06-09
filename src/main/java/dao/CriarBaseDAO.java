@@ -41,7 +41,7 @@ public class CriarBaseDAO {
         }
     }
 
-    public void criarArquivoProperties(String servidor, String usuario, String porta, String nomeBase) {
+    public void criarArquivoProperties(String servidor, String usuario, String porta, String nomeBase, String senha) {
         String caminhoPasta = "C:\\ProjetoDevVR";
         String caminhoArquivo = caminhoPasta + "\\config.properties";
         File pasta = new File(caminhoPasta);
@@ -53,6 +53,7 @@ public class CriarBaseDAO {
         propriedades.setProperty("usuario", usuario);
         propriedades.setProperty("porta", porta);
         propriedades.setProperty("nomebase", nomeBase);
+        propriedades.setProperty("senha", senha);
         File arquivo = new File(caminhoArquivo);
         if (arquivo.exists()) {
             return;
